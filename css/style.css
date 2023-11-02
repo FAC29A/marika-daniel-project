@@ -51,7 +51,7 @@ INDIVIDUAL COLUMN STYLING
     width: 30%;
 }
 
-/*
+ /*
 =================================================
 COLUMN HEADER STYLING
 =================================================
@@ -59,3 +59,22 @@ COLUMN HEADER STYLING
 .column-header {
     font-weight: bold;
 }
+
+/*
+=================================================
+SHAKE ANIMATION STYLES
+Provides visual feedback (a shake effect) for elements
+to indicate an error or a required action has not been
+performed correctly, such as submitting an empty form field.
+=================================================
+*/
+.shake {
+    animation: shake 0.5s;
+  }
+  
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25%, 75% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+  }
+  
