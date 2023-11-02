@@ -1,0 +1,61 @@
+/*
+=================================================
+MAIN CONTAINER STYLING FOR TO-DO LIST APP
+=================================================
+*/
+.project-board {
+    text-align: center;
+    padding: 20px;
+}
+
+/*
+=================================================
+MAIN TITLE STYLING FOR TO-DO LIST
+=================================================
+*/
+.title {
+    margin-bottom: 20px;
+}
+
+/*
+=================================================
+INPUT CONTAINER STYLING
+=================================================
+*/
+.input-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/*
+=================================================
+COLUMNS CONTAINER STYLING
+=================================================
+*/
+.columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/*
+=================================================
+INDIVIDUAL COLUMN STYLING
+=================================================
+*/
+.column {
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 30%;
+}
+
+/*
+=================================================
+COLUMN HEADER STYLING
+=================================================
+*/
+.column-header {
+    font-weight: bold;
+}
