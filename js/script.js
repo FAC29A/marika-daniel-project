@@ -2,7 +2,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const addButton = document.getElementById('addTask');
     const taskInput = document.getElementById('taskInput');
-    const todoList = document.querySelector('.column.todo'); // The 'Todo' column container
+    const todoList = document.querySelector('.column.todo'); 
 
     // Event listener for the 'Add' button for the click event
     addButton.addEventListener('click', () => {
