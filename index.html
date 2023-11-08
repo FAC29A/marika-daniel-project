@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/style.css">
     <script src="./js/script.js" defer></script>
@@ -11,44 +11,55 @@
     <script src="./js/test.js" defer></script>
     <title>To-do List</title>
 </head>
-
 <body>
     <!-- Main container for the to-do list app -->
     <div class="project-board">
         <h1 class="title">To-Do List</h1>
-        
         <div class="input-container">
             <input type="text" id="taskInput" placeholder="Add a new task">
-            <button id="addTask">Add</button>
+            <button id="addTask"><i class="fas fa-plus"></i> Add</button>
         </div>
 
         <!-- Container for the three columns (todo, in progress, done) -->
-        <div class="columns"> 
-            <div class="column todo"> 
-                <div class="column-header">Not started</div>
-                <div id="not-started-number"></div>
+        <div class="columns">
+            <div class="column todo">
+                <div class="column-header">
+                    <span class="status-dot" style="color: green;">●</span>
+                    Not started <span class="task-count" id="not-started-count">0</span>
+                </div>
                 <div class="tasksContainer" id="not-started-container">
                     <!-- Tasks will be dynamically added here -->
                 </div>
             </div>
-
             <div class="column in-progress">
-                <div class="column-header">In Progress</div>
+                <div class="column-header">
+                    <span class="status-dot" style="color: orange;">●</span>
+                    In Progress <span class="task-count" id="in-progress-count">0</span>
+                </div>
                 <div class="tasksContainer" id="in-progress-container">
                     <!-- Tasks will be dynamically added here -->
                 </div>
             </div>
-
-            <div class="column done"> 
-                <div class="column-header">Done</div>
+            <div class="column done">
+                <div class="column-header">
+                    <span class="status-dot" style="color: purple;">●</span>
+                    Done <span class="task-count" id="complete-count">0</span>
+                </div>
                 <div class="tasksContainer" id="complete-container">
                     <!-- Tasks will be dynamically added here -->
                 </div>
             </div>
         </div>
-    </div> 
-</body>
 
+        <!-- Footer -->
+        <div class="footer">
+            <div class="copy">
+                <p>Copyright © 2023 Marika Bertelli & Daniel</p>
+            </div>
+        </div>
+    </div>
+</body>
 </html>
+
 
 
