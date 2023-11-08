@@ -1,20 +1,23 @@
 /*
 =================================================
-MAIN CONTAINER STYLING FOR TO-DO LIST APP
+MAIN CONTAINER STYLING
 =================================================
 */
 .project-board {
     text-align: center;
     padding: 20px;
+    background-color: #f7f7f7; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
 /*
 =================================================
-MAIN TITLE STYLING FOR TO-DO LIST
+TITLE STYLING
 =================================================
 */
 .title {
-    margin-bottom: 20px;
+    margin-bottom: 20px; 
 }
 
 /*
@@ -26,7 +29,29 @@ INPUT CONTAINER STYLING
     display: flex;
     justify-content: center;
     gap: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Space below the input container */
+}
+
+#taskInput {
+    width: 80%;
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+}
+
+/*
+=================================================
+BUTTON STYLING
+=================================================
+*/
+#addTask {
+    padding: 10px 20px;
+    background-color: #5cb85c; 
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
 }
 
 /*
@@ -40,42 +65,87 @@ COLUMNS CONTAINER STYLING
     gap: 20px;
 }
 
+.column-header {
+    font-weight: bold;
+    background-color: #83ca85; 
+    color: white;
+    padding: 10px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    margin: -10px -10px 10px -10px; /* Overlap border */
+}
+
+.status-dot {
+    font-size: 30px; 
+    margin-right: 5px; 
+}
+
 /*
 =================================================
-INDIVIDUAL COLUMN STYLING
+COLUMN STYLING
 =================================================
 */
 .column {
     border: 1px solid #ccc;
+    background-color: #ffffff; /* White background for each column */
     padding: 10px;
     width: 30%;
-}
-
- /*
-=================================================
-COLUMN HEADER STYLING
-=================================================
-*/
-.column-header {
-    font-weight: bold;
+    border-radius: 8px; /* Rounded corners for columns */
 }
 
 /*
 =================================================
-SHAKE ANIMATION STYLES
-Provides visual feedback (a shake effect) for elements
-to indicate an error or a required action has not been
-performed correctly, such as submitting an empty form field.
+TASK STYLING
 =================================================
 */
-.shake {
-    animation: shake 0.5s;
-  }
-  
-  @keyframes shake {
-    0%, 100% { transform: translateX(0); }
-    25%, 75% { transform: translateX(-10px); }
-    50% { transform: translateX(10px); }
-  }
-  
+.tasksContainer {
+    min-height: 150px;
+}
+
+.task {
+    background-color: #ffffff; 
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px; /* Space between tasks */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #eeeeee; /* Border for tasks */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.task:hover {
+    background-color: #f0f0f0; /* Light grey background on hover */
+}
+
+/*
+=================================================
+TASK COUNTER STYLING
+=================================================
+*/
+.task-count {
+    font-weight: normal;
+    padding-left: 5px;
+}
+
+/*
+=================================================
+FOOTER STYLING
+=================================================
+*/
+.footer {
+    text-align: center;
+    padding: 20px 10px;
+}
+
+.copy p {
+    color: #333333; 
+    font-size: 0.8em;
+}
+
+
+
+
+
+
   
