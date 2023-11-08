@@ -13,9 +13,7 @@ const todoList = [];
 // Event listener for the 'Add' button click event
     addButton.addEventListener('click', () => {
         if(taskInput.value.length > 0){
-            console.log('Before adding task:', todoList);
             addTask();
-            console.log('After adding task:', todoList);
         }
         upDateDom()
     }); 
@@ -27,8 +25,6 @@ function addTask() {
     newTask.title = taskInput.value;
     newTask.state = "not-started";
     todoList.push(newTask);
-    console.log(todoList);
-
     taskInput.value = "";
 }
 
@@ -38,6 +34,7 @@ function upDateDom() {
 
     // Filter the todoList to find tasks with the 'not-started' state
     const notStartedTasks = todoList.filter(item => item.state === "not-started");
+    
 
     // Iterate over the filtered tasks and append them to the DOM
     notStartedTasks.forEach(item => {
