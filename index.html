@@ -9,43 +9,62 @@
     <script src="./js/script.js" defer></script>
     <script src="./js/test-helpers.js" defer></script>
     <script src="./js/test.js" defer></script>
-    <title>To-do List</title>
+    <title>ToDue</title>
 </head>
 <body>
     <!-- Main container for the to-do list app -->
     <div class="project-board">
-        <h1 class="title">To-Do List</h1>
+        <h1 class="title">ToDue</h1>
         <div class="input-container">
             <input type="text" id="taskInput" placeholder="Add a new task">
-            <button id="addTask"><i class="fas fa-plus"></i> Add</button>
+            <button id="addTask">Add Todo</button>
         </div>
 
         <!-- Container for the three columns (todo, in progress, done) -->
         <div class="columns">
             <div class="column todo">
                 <div class="column-header">
-                    <span class="status-dot" style="color: green;">●</span>
-                    Not started <span class="task-count" id="not-started-count">0</span>
+                    <div class="column-title">
+                        <span class="status-dot todo-dot"></span>
+                        <span class="status-title">Todo</span>
+                        <span class="task-count" id="not-started-count">0</span>
+                    </div>
+                    <div class="info-section">
+                        <span class="column-info">These tasks haven't been started.</span>
+                    </div>
                 </div>
-                <div class="tasksContainer" id="not-started-container">
+                <div class="tasks-container" id="not-started-container">
                     <!-- Tasks will be dynamically added here -->
+                    
                 </div>
             </div>
             <div class="column in-progress">
                 <div class="column-header">
-                    <span class="status-dot" style="color: orange;">●</span>
-                    In Progress <span class="task-count" id="in-progress-count">0</span>
+                    <div class="column-title">
+                        <span class="status-dot in-prog-dot"></span>
+                        <span class="status-title">In Progress</span>
+                        <span class="task-count" id="in-progress-count">0</span>
+                    </div>
+                    <div class="info-section">
+                        <span class="column-info">These tasks are still in progress.</span>
+                    </div>
                 </div>
-                <div class="tasksContainer" id="in-progress-container">
+                <div class="tasks-container" id="in-progress-container">
                     <!-- Tasks will be dynamically added here -->
                 </div>
             </div>
             <div class="column done">
                 <div class="column-header">
-                    <span class="status-dot" style="color: purple;">●</span>
-                    Done <span class="task-count" id="complete-count">0</span>
+                    <div class="column-title">
+                        <span class="status-dot done-dot"></span>
+                        <span class="status-title">Done</span>
+                        <span class="task-count" id="complete-count">0</span>
+                    </div>
+                    <div class="info-section">
+                        <span class="column-info">These tasks are finished.</span>
+                    </div>
                 </div>
-                <div class="tasksContainer" id="complete-container">
+                <div class="tasks-container" id="complete-container">
                     <!-- Tasks will be dynamically added here -->
                 </div>
             </div>
@@ -57,6 +76,32 @@
                 <p>Copyright © 2023 Marika Bertelli & Daniel</p>
             </div>
         </div>
+
+        <!-- Templates -->
+        <template>
+            <div class="task-tile">
+                <div class="task-top">
+                    <span class="todo-importance">Urgent</span>
+                    <div class="icon-container">
+                        <svg aria-hidden="true" focusable="false" role="img" class="octicon octicon-kebab-horizontal" viewBox="0 0 16 16" width="16" height="16" fill="black" style="display: inline-block; user-select: none; vertical-align: text-bottom; overflow: visible;">
+                            <path d="M8 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3ZM1.5 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Zm13 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"></path>
+                        </svg>
+                        <div class="drop-menu">
+                            <div class="drop-container">
+                                <span class="menu-options">In-progress</span>
+                                <span class="menu-options">Done</span>
+                                <span class="menu-options">Delete</span>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="task-text">
+                    <span>Create a todo</span>
+                </div>
+            </div>
+        </template>
+
     </div>
 </body>
 </html>
