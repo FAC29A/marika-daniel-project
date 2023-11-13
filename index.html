@@ -78,8 +78,8 @@
         </div>
 
         <!-- Templates -->
-        <template>
-            <div class="task-tile">
+        <template id="todo-template">
+            <div class="task-tile" tabindex="0">
                 <div class="task-top">
                     <span class="todo-importance">Urgent</span>
                     <div class="icon-container">
@@ -88,16 +88,16 @@
                         </svg>
                         <div class="drop-menu">
                             <div class="drop-container">
-                                <span class="menu-options">In-progress</span>
-                                <span class="menu-options">Done</span>
-                                <span class="menu-options">Delete</span>
-                                
+                                <span class="menu-options" id="start">Todo</span>
+                                <span class="menu-options" id="in-prog">In-progress</span>
+                                <span class="menu-options" id="done">Done</span>
+                                <span class="menu-options" id="delete">Delete</span>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="task-text">
-                    <span>Create a todo</span>
+                    <span id="text-field"></span>
                 </div>
             </div>
         </template>

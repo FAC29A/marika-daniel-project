@@ -184,6 +184,9 @@ TASK STYLING
     width: 100%;
     padding: 5px 8px;
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .task-tile {
@@ -240,6 +243,13 @@ TASK STYLING
 .task-text span {
     font-size: 14px;
     color: var(--text-primary);
+}
+
+.task-text {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 /*
