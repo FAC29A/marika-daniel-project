@@ -45,10 +45,11 @@ function upDateDom() {
         const option2 = todoTemplate.querySelector('.task-tile #in-prog');
         const option3 = todoTemplate.querySelector('.task-tile #done');
         const option4 = todoTemplate.querySelector('.task-tile #delete');
+        const svg1 = todoTemplate.querySelector('.task-tile #svg');
         templateTitle.textContent = item.title;
         notStartedContainer.appendChild(todoTemplate)
 
-        testing1(option1, option2, option3, option4)
+        testing1(option1, option2, option3, option4, svg1)
     })
 
 
@@ -63,10 +64,11 @@ function upDateDom() {
         const option2 = todoTemplate.querySelector('.task-tile #in-prog');
         const option3 = todoTemplate.querySelector('.task-tile #done');
         const option4 = todoTemplate.querySelector('.task-tile #delete');
+        const svg1 = todoTemplate.querySelector('.task-tile #svg');
         templateTitle.textContent = item.title;
         inProgressContainer.appendChild(todoTemplate)
         
-        testing1(option1, option2, option3, option4)
+        testing1(option1, option2, option3, option4, svg1)
         
     })
     
@@ -80,17 +82,28 @@ function upDateDom() {
         const option2 = todoTemplate.querySelector('.task-tile #in-prog');
         const option3 = todoTemplate.querySelector('.task-tile #done');
         const option4 = todoTemplate.querySelector('.task-tile #delete');
+        const svg1 = todoTemplate.querySelector('.task-tile #svg');
         templateTitle.textContent = item.title;
         completeContainer.appendChild(todoTemplate)
         
-        testing1(option1, option2, option3, option4)
-        
+        testing1(option1, option2, option3, option4, svg1)
     })
     
 }
 
 
-function testing1(tar1, tar2, tar3, tar4) {
+function testing1(tar1, tar2, tar3, tar4, tar5) {
+    let checker = false
+    tar5.addEventListener('click', (e) => {
+        checker = !checker
+        if(checker == false) {
+            const dropMenu = e.target.closest('.task-tile').querySelector('#drop-menu');
+            dropMenu.style.visibility = 'visible'
+        }else{
+            const dropMenu = e.target.closest('.task-tile').querySelector('#drop-menu');
+            dropMenu.style.visibility = 'hidden'
+        }
+    })
 
     // Target for reseting a task
 
@@ -156,3 +169,4 @@ function testing1(tar1, tar2, tar3, tar4) {
         upDateDom()
     });
 }
+

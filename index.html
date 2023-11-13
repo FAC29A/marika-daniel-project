@@ -69,6 +69,9 @@
                 </div>
             </div>
         </div>
+        <dialog>
+            <div>Test</div>
+        </dialog>
 
         <!-- Footer -->
         <div class="footer">
@@ -83,15 +86,15 @@
                 <div class="task-top">
                     <span class="todo-importance">Urgent</span>
                     <div class="icon-container">
-                        <svg aria-hidden="true" focusable="false" role="img" class="octicon octicon-kebab-horizontal" viewBox="0 0 16 16" width="16" height="16" fill="black" style="display: inline-block; user-select: none; vertical-align: text-bottom; overflow: visible;">
+                        <svg id='svg' aria-hidden="true" focusable="true" tabindex="0" role="img" class="octicon octicon-kebab-horizontal" viewBox="0 0 16 16" width="16" height="16" fill="black" style="display: inline-block; user-select: none; vertical-align: text-bottom; overflow: visible;">
                             <path d="M8 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3ZM1.5 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Zm13 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"></path>
                         </svg>
-                        <div class="drop-menu">
+                        <div class="drop-menu" id="drop-menu">
                             <div class="drop-container">
-                                <span class="menu-options" id="start">Todo</span>
-                                <span class="menu-options" id="in-prog">In-progress</span>
-                                <span class="menu-options" id="done">Done</span>
-                                <span class="menu-options" id="delete">Delete</span>
+                                <span class="menu-options" id="start" tabindex="0">Todo</span>
+                                <span class="menu-options" id="in-prog" tabindex="0">In-progress</span>
+                                <span class="menu-options" id="done" tabindex="0">Done</span>
+                                <span class="menu-options" id="delete" tabindex="0">Delete</span>
                             </div>
                         </div>
                     </div>

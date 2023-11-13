@@ -231,13 +231,13 @@ TASK STYLING
     position: relative;
 }
 
-/* .icon-container:hover {
-    background-color: var(--border-primary);
-    opacity: 0.5;
-} */
-
 .task-top div svg {
     fill: var(--text-primary);
+    position: relative;
+}
+
+.task-top div svg:hover {
+    cursor: pointer;
 }
 
 .task-text span {
@@ -258,9 +258,6 @@ DROP DOWN MENU
 =================================================
 */
 
-.icon-container:hover .drop-menu {
-    visibility: visible;
-}
 
 .drop-menu {
     position: fixed;
