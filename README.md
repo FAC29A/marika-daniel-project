@@ -44,6 +44,8 @@ To use ToDue, follow these installation instructions:
 3. **Open in a Browser:**
    - Open the `index.html` file in your preferred web browser.
    - The application should load and be ready for use.
+  
+https://fac29a.github.io/marika-daniel-project/
 
 ---
 
