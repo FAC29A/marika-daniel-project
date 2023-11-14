@@ -49,7 +49,7 @@ function upDateDom() {
         templateTitle.textContent = item.title;
         notStartedContainer.appendChild(todoTemplate)
 
-        testing1(option1, option2, option3, option4, svg1)
+        menuOptions(option1, option2, option3, option4, svg1)
     })
 
 
@@ -68,7 +68,7 @@ function upDateDom() {
         templateTitle.textContent = item.title;
         inProgressContainer.appendChild(todoTemplate)
         
-        testing1(option1, option2, option3, option4, svg1)
+        menuOptions(option1, option2, option3, option4, svg1)
         
     })
     
@@ -86,15 +86,17 @@ function upDateDom() {
         templateTitle.textContent = item.title;
         completeContainer.appendChild(todoTemplate)
         
-        testing1(option1, option2, option3, option4, svg1)
+        menuOptions(option1, option2, option3, option4, svg1)
     })
     
 }
 
 
-function testing1(tar1, tar2, tar3, tar4, tar5) {
+function menuOptions(target1, target2, target3, target4, target5) {
+    // Target for opening the drop down menu
+
     let checker = false
-    tar5.addEventListener('click', (e) => {
+    target5.addEventListener('click', (e) => {
         checker = !checker
         if(checker == false) {
             const dropMenu = e.target.closest('.task-tile').querySelector('#drop-menu');
@@ -107,7 +109,7 @@ function testing1(tar1, tar2, tar3, tar4, tar5) {
 
     // Target for reseting a task
 
-    tar1.addEventListener("click", (e) => {
+    target1.addEventListener("click", (e) => {
         const textSpan = e.target.closest('.task-tile').querySelector('#text-field');
         
         console.log(textSpan.textContent);
@@ -123,7 +125,7 @@ function testing1(tar1, tar2, tar3, tar4, tar5) {
 
     // Target for 'in-progressing' a task
 
-    tar2.addEventListener("click", (e) => {
+    target2.addEventListener("click", (e) => {
         const textSpan = e.target.closest('.task-tile').querySelector('#text-field');
         
         console.log(textSpan.textContent);
@@ -139,7 +141,7 @@ function testing1(tar1, tar2, tar3, tar4, tar5) {
 
     // Target for 'completing' a task
 
-    tar3.addEventListener("click", (e) => {
+    target3.addEventListener("click", (e) => {
         const textSpan = e.target.closest('.task-tile').querySelector('#text-field');
         
         console.log(textSpan.textContent);
@@ -155,7 +157,7 @@ function testing1(tar1, tar2, tar3, tar4, tar5) {
 
     // Target for deleting a task
 
-    tar4.addEventListener("click", (e) => {
+    target4.addEventListener("click", (e) => {
         const textSpan = e.target.closest('.task-tile').querySelector('#text-field');
         
         console.log(textSpan.textContent);
