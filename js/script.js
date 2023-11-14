@@ -45,11 +45,13 @@ function upDateDom() {
         const option2 = todoTemplate.querySelector('.task-tile #in-prog');
         const option3 = todoTemplate.querySelector('.task-tile #done');
         const option4 = todoTemplate.querySelector('.task-tile #delete');
-        const svg1 = todoTemplate.querySelector('.task-tile #svg');
+        const iconCon = todoTemplate.querySelector('.task-tile #icon-container');
         templateTitle.textContent = item.title;
         notStartedContainer.appendChild(todoTemplate)
 
-        menuOptions(option1, option2, option3, option4, svg1)
+        menuOptions(option1, option2, option3, option4, iconCon)
+
+        
     })
 
 
@@ -64,11 +66,11 @@ function upDateDom() {
         const option2 = todoTemplate.querySelector('.task-tile #in-prog');
         const option3 = todoTemplate.querySelector('.task-tile #done');
         const option4 = todoTemplate.querySelector('.task-tile #delete');
-        const svg1 = todoTemplate.querySelector('.task-tile #svg');
+        const iconCon = todoTemplate.querySelector('.task-tile #icon-container');
         templateTitle.textContent = item.title;
         inProgressContainer.appendChild(todoTemplate)
         
-        menuOptions(option1, option2, option3, option4, svg1)
+        menuOptions(option1, option2, option3, option4, iconCon)
         
     })
     
@@ -82,11 +84,11 @@ function upDateDom() {
         const option2 = todoTemplate.querySelector('.task-tile #in-prog');
         const option3 = todoTemplate.querySelector('.task-tile #done');
         const option4 = todoTemplate.querySelector('.task-tile #delete');
-        const svg1 = todoTemplate.querySelector('.task-tile #svg');
+        const iconCon = todoTemplate.querySelector('.task-tile #icon-container');
         templateTitle.textContent = item.title;
         completeContainer.appendChild(todoTemplate)
         
-        menuOptions(option1, option2, option3, option4, svg1)
+        menuOptions(option1, option2, option3, option4, iconCon)
     })
     
     // Find and append the length of the different sections
@@ -104,7 +106,7 @@ function menuOptions(target1, target2, target3, target4, target5) {
     let checker = false
     target5.addEventListener('click', (e) => {
         checker = !checker
-        if(checker == false) {
+        if(checker == true) {
             const dropMenu = e.target.closest('.task-tile').querySelector('#drop-menu');
             dropMenu.style.visibility = 'visible'
         }else{
@@ -112,6 +114,13 @@ function menuOptions(target1, target2, target3, target4, target5) {
             dropMenu.style.visibility = 'hidden'
         }
     })
+
+    target5.addEventListener("keypress", (e) => {
+        console.log("1");
+        if (e.key === "Enter") {
+            target5.click()
+        }
+    }); 
 
     // Target for reseting a task
 
@@ -129,6 +138,13 @@ function menuOptions(target1, target2, target3, target4, target5) {
         upDateDom()
     });
 
+
+    target1.addEventListener("keypress", (e) => {
+        if (e.key === "Enter") {
+            target1.click()
+        }
+    }); 
+
     // Target for 'in-progressing' a task
 
     target2.addEventListener("click", (e) => {
@@ -144,6 +160,12 @@ function menuOptions(target1, target2, target3, target4, target5) {
         completeContainer.innerHTML = '';
         upDateDom()
     });
+    
+    target2.addEventListener("keypress", (e) => {
+        if (e.key === "Enter") {
+            target2.click()
+        }
+    }); 
 
     // Target for 'completing' a task
 
@@ -161,6 +183,12 @@ function menuOptions(target1, target2, target3, target4, target5) {
         upDateDom()
     });
 
+    target3.addEventListener("keypress", (e) => {
+        if (e.key === "Enter") {
+            target3.click()
+        }
+    }); 
+
     // Target for deleting a task
 
     target4.addEventListener("click", (e) => {
@@ -176,4 +204,20 @@ function menuOptions(target1, target2, target3, target4, target5) {
         completeContainer.innerHTML = '';
         upDateDom()
     });
+
+    target4.addEventListener("keypress", (e) => {
+        if (e.key === "Enter") {
+            target4.click()
+        }
+    }); 
 }
+
+
+// Using Enter to submit task
+
+taskInput.addEventListener("keypress", (e) => {
+    if(e.key === "Enter"){
+        addButton.click()
+    }
+})
+

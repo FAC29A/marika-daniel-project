@@ -240,8 +240,9 @@ TASK STYLING
     align-items: center;
 }
 
-.task-top div svg:hover {
+.icon-container:hover {
     cursor: pointer;
+    background-color: #22272E;
 }
 
 .task-text span {
