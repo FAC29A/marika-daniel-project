@@ -356,8 +356,74 @@ FOOTER STYLING
 }
 
 
+/*
+=================================================
+Responsiveness
+=================================================
+*/
 
-
+@media screen and (max-width: 1000px) {
+    .project-board {
+        overflow-y: scroll;
+        width: 100vw;
+        overflow-x: hidden;
+    }
+    .columns {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: max-content;
+        padding: 10px 20px;
+    }
+    .column {
+        height: 500px;
+        min-height: 500px;
+        display: flex;
+        justify-content: start;
+        width: 100%;
+    }
+    .drop-menu {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        content: " ";
+        background-color: var(--tile);
+        border-radius: 6px;
+        border: 1px solid var(--border-primary);
+        z-index: 5;
+        translate: -60% 0%;
+        visibility: hidden;
+    }
+    .icon-container {
+        padding: 3px 5px;
+        height: max-content;
+        transition: all 0.3s;
+        border-radius: 3px;
+        position: relative;
+        z-index: 1;
+    }
+    .tasks-container {
+        height: 100%;
+        min-height: 100%;
+    }
+    .drop-menu::before {
+        display: none;
+    }
+    .input-container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    #addTask, #taskInput {
+        width: 90%;
+    }
+    body {
+        width: 100vw;
+        overflow-x: hidden;
+    }
+}
 
 
   
