@@ -89,6 +89,12 @@ function upDateDom() {
         menuOptions(option1, option2, option3, option4, svg1)
     })
     
+    // Find and append the length of the different sections
+
+    document.getElementById("not-started-count").textContent = todoList.filter(item => item.state == "not-started").length
+    document.getElementById("in-progress-count").textContent = todoList.filter(item => item.state == "in-progress").length
+    document.getElementById("complete-count").textContent = todoList.filter(item => item.state == "completed").length
+
 }
 
 
