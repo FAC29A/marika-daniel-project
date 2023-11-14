@@ -12,14 +12,22 @@ let todoList = [];
 // ================= EVENT LISTENERS =================
 // Event listener for the 'Add' button click event
 addButton.addEventListener('click', () => {
-    if(taskInput.value.length > 0 ){
-        addTask()
+
+    if (taskInput.value.trim().length > 0) {
+        const inputValue = taskInput.value.trim().toLowerCase();
+
+        if (todoList.some((task) => task.title.toLowerCase() === inputValue)) {
+            alert("You already have this task");
+        } else {
+            addTask();
+        }
+
+        notStartedContainer.innerHTML = '';
+        inProgressContainer.innerHTML = '';
+        completeContainer.innerHTML = '';
+        upDateDom();
     }
-    notStartedContainer.innerHTML = '';
-    inProgressContainer.innerHTML = '';
-    completeContainer.innerHTML = '';
-    upDateDom()
-}); 
+});
 
 
 // ================= TASK MANIPULATION =================
