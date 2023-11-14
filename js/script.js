@@ -97,6 +97,7 @@ function upDateDom() {
     document.getElementById("in-progress-count").textContent = todoList.filter(item => item.state == "in-progress").length
     document.getElementById("complete-count").textContent = todoList.filter(item => item.state == "completed").length
 
+    saveTodoList()
 }
 
 
@@ -221,3 +222,26 @@ taskInput.addEventListener("keypress", (e) => {
     }
 })
 
+
+
+
+// Saving todoList
+
+function saveTodoList() {
+    localStorage.clear('todoList')
+    localStorage.setItem('todoList', JSON.stringify(todoList));
+}
+
+
+// Loading todoList to the page
+
+
+function loadTodoList() {
+    const savedTodoList = localStorage.getItem('todoList');
+    if (savedTodoList) {
+        todoList = JSON.parse(savedTodoList);
+        upDateDom();
+    }
+}
+
+loadTodoList()
